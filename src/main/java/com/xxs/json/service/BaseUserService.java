@@ -1,6 +1,7 @@
 package com.xxs.json.service;
 
 import com.xxs.json.entity.BaseUser;
+import com.xxs.json.entity.vo.UserVO;
 
 /**
  * @author van
@@ -18,5 +19,5 @@ public interface BaseUserService {
      * @param baseUser 账户和密码
      * @return baseUser
      * */
-    BaseUser userLogin(BaseUser baseUser);
+    UserVO userLogin(BaseUser baseUser);
 }

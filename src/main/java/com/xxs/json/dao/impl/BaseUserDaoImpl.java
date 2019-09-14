@@ -37,4 +37,10 @@ public class BaseUserDaoImpl implements BaseUserDao {
         List<BaseUser> baseUsers = mapper.selectByExample(baseUserExample);
         return CollectionUtils.isEmpty(baseUsers) ? null : baseUsers.get(0);
     }
+
+    @Override
+    public void updateUser(BaseUser user) {
+        user.setGmtModified(DateUtils.now());
+        mapper.updateByPrimaryKeySelective(user);
+    }
 }

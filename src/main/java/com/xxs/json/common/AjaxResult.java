@@ -35,10 +35,10 @@ public class AjaxResult<T> {
                 .build();
     }
 
-    public static AjaxResult fail(String code, String msg){
+    public static AjaxResult fail(ResultCode code){
         return AjaxResult.builder()
-                .code(code)
-                .message(msg)
+                .code(code.getCode())
+                .message(code.getMsg())
                 .build();
     }
 

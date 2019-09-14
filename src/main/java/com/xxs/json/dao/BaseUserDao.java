@@ -18,4 +18,10 @@ public interface BaseUserDao {
      * @return user
      * */
     BaseUser getUser(String account);
+
+    /**
+     * 更新用户信息
+     * @param user user
+     * */
+    void updateUser(BaseUser user);
 }

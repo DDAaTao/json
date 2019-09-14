@@ -1,7 +1,9 @@
 package com.xxs.json.controller;
 
 import com.xxs.json.common.AjaxResult;
+import com.xxs.json.common.ResultCode;
 import com.xxs.json.entity.BaseUser;
+import com.xxs.json.entity.vo.UserVO;
 import com.xxs.json.service.BaseUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -23,6 +25,15 @@ public class UserController {
     public AjaxResult userRegistered(@RequestBody BaseUser user){
         baseUserService.addUser(user);
         return AjaxResult.success();
+    }
+    @PostMapping("/user/login")
+    @ResponseBody
+    public AjaxResult userLogin(@RequestBody BaseUser user){
+        UserVO baseUser = baseUserService.userLogin(user);
+        if (baseUser == null){
+            return AjaxResult.fail(ResultCode.DROP_FAIL);
+        }
+        return AjaxResult.success(baseUser);
     }
 
 }
