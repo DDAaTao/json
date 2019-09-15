@@ -26,11 +26,13 @@ public interface TextMainService {
     /**
      * 新增笔记
      * @param text 笔记
+     * @exception JsonGroupException 自定异常类
      * */
     void addTextBody(TextBody text) throws JsonGroupException;
     /**
      * 新增侧栏
      * @param label 侧栏
+     * @exception JsonGroupException 自定异常类
      * */
     void addTextLabel(TextLabel label) throws JsonGroupException;
 }

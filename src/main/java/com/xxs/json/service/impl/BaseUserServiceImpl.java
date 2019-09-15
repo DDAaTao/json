@@ -44,6 +44,7 @@ public class BaseUserServiceImpl implements BaseUserService {
         baseUserDao.updateUser(BaseUser.builder()
                 .id(user.getId()).lastLoginTime(user.getLastLoginTime()).build());
         return UserVO.builder()
+                .userId(user.getId())
                 .nickname(user.getNickname())
                 .avator(user.getAvator())
                 .email(user.getEmail())

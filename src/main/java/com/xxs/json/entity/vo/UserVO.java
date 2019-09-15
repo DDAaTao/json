@@ -13,6 +13,7 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 public class UserVO {
+    private Long userId;
     private String nickname;
     private String email;
     private String status;

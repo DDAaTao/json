@@ -9,12 +9,14 @@ import com.xxs.json.entity.TextBody;
 import com.xxs.json.entity.TextLabel;
 import com.xxs.json.service.TextMainService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 /**
  * @author van
  */
+@Service
 public class TextMainServiceImpl implements TextMainService {
 
     @Autowired
