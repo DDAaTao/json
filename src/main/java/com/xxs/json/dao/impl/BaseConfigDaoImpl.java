@@ -25,7 +25,8 @@ public class BaseConfigDaoImpl implements BaseConfigDao {
         BaseConfigExample example = new BaseConfigExample();
         example.createCriteria()
                 .andConfigNameEqualTo(configName)
-                .andEnvEqualTo(getEnv());
+                .andEnvEqualTo(getEnv())
+                .andIsDeletedEqualTo(false);
         List<BaseConfig> baseConfigs = mapper.selectByExample(example);
         return CollectionUtils.isEmpty(baseConfigs) ? null : baseConfigs.get(0);
     }
@@ -33,7 +34,9 @@ public class BaseConfigDaoImpl implements BaseConfigDao {
     @Override
     public String getEnv() {
         BaseConfigExample example = new BaseConfigExample();
-        example.createCriteria().andConfigNameEqualTo(ConfigEnum.ENV.getConfigName());
+        example.createCriteria()
+                .andConfigNameEqualTo(ConfigEnum.ENV.getConfigName())
+                .andIsDeletedEqualTo(false);
         List<BaseConfig> baseConfigs = mapper.selectByExample(example);
         return CollectionUtils.isEmpty(baseConfigs) ? null : baseConfigs.get(0).getConfigBody();
     }
