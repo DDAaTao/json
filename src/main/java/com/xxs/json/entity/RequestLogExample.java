@@ -515,6 +515,146 @@ public class RequestLogExample {
             return (Criteria) this;
         }
 
+        public Criteria andRequestBodyIsNull() {
+            addCriterion("request_body is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andRequestBodyIsNotNull() {
+            addCriterion("request_body is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andRequestBodyEqualTo(String value) {
+            addCriterion("request_body =", value, "requestBody");
+            return (Criteria) this;
+        }
+
+        public Criteria andRequestBodyNotEqualTo(String value) {
+            addCriterion("request_body <>", value, "requestBody");
+            return (Criteria) this;
+        }
+
+        public Criteria andRequestBodyGreaterThan(String value) {
+            addCriterion("request_body >", value, "requestBody");
+            return (Criteria) this;
+        }
+
+        public Criteria andRequestBodyGreaterThanOrEqualTo(String value) {
+            addCriterion("request_body >=", value, "requestBody");
+            return (Criteria) this;
+        }
+
+        public Criteria andRequestBodyLessThan(String value) {
+            addCriterion("request_body <", value, "requestBody");
+            return (Criteria) this;
+        }
+
+        public Criteria andRequestBodyLessThanOrEqualTo(String value) {
+            addCriterion("request_body <=", value, "requestBody");
+            return (Criteria) this;
+        }
+
+        public Criteria andRequestBodyLike(String value) {
+            addCriterion("request_body like", value, "requestBody");
+            return (Criteria) this;
+        }
+
+        public Criteria andRequestBodyNotLike(String value) {
+            addCriterion("request_body not like", value, "requestBody");
+            return (Criteria) this;
+        }
+
+        public Criteria andRequestBodyIn(List<String> values) {
+            addCriterion("request_body in", values, "requestBody");
+            return (Criteria) this;
+        }
+
+        public Criteria andRequestBodyNotIn(List<String> values) {
+            addCriterion("request_body not in", values, "requestBody");
+            return (Criteria) this;
+        }
+
+        public Criteria andRequestBodyBetween(String value1, String value2) {
+            addCriterion("request_body between", value1, value2, "requestBody");
+            return (Criteria) this;
+        }
+
+        public Criteria andRequestBodyNotBetween(String value1, String value2) {
+            addCriterion("request_body not between", value1, value2, "requestBody");
+            return (Criteria) this;
+        }
+
+        public Criteria andRemarkIsNull() {
+            addCriterion("remark is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andRemarkIsNotNull() {
+            addCriterion("remark is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andRemarkEqualTo(String value) {
+            addCriterion("remark =", value, "remark");
+            return (Criteria) this;
+        }
+
+        public Criteria andRemarkNotEqualTo(String value) {
+            addCriterion("remark <>", value, "remark");
+            return (Criteria) this;
+        }
+
+        public Criteria andRemarkGreaterThan(String value) {
+            addCriterion("remark >", value, "remark");
+            return (Criteria) this;
+        }
+
+        public Criteria andRemarkGreaterThanOrEqualTo(String value) {
+            addCriterion("remark >=", value, "remark");
+            return (Criteria) this;
+        }
+
+        public Criteria andRemarkLessThan(String value) {
+            addCriterion("remark <", value, "remark");
+            return (Criteria) this;
+        }
+
+        public Criteria andRemarkLessThanOrEqualTo(String value) {
+            addCriterion("remark <=", value, "remark");
+            return (Criteria) this;
+        }
+
+        public Criteria andRemarkLike(String value) {
+            addCriterion("remark like", value, "remark");
+            return (Criteria) this;
+        }
+
+        public Criteria andRemarkNotLike(String value) {
+            addCriterion("remark not like", value, "remark");
+            return (Criteria) this;
+        }
+
+        public Criteria andRemarkIn(List<String> values) {
+            addCriterion("remark in", values, "remark");
+            return (Criteria) this;
+        }
+
+        public Criteria andRemarkNotIn(List<String> values) {
+            addCriterion("remark not in", values, "remark");
+            return (Criteria) this;
+        }
+
+        public Criteria andRemarkBetween(String value1, String value2) {
+            addCriterion("remark between", value1, value2, "remark");
+            return (Criteria) this;
+        }
+
+        public Criteria andRemarkNotBetween(String value1, String value2) {
+            addCriterion("remark not between", value1, value2, "remark");
+            return (Criteria) this;
+        }
+
         public Criteria andIsDeletedIsNull() {
             addCriterion("is_deleted is null");
             return (Criteria) this;

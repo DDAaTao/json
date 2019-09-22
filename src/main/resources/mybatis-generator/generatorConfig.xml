@@ -62,58 +62,59 @@
             <columnOverride column="deleted" jdbcType="TINYINT" javaType="Boolean" />
             <columnOverride column="remark" jdbcType="CLOB" javaType="String" />
         </table>-->
-        <table tableName="base_user" modelType="flat"
+<!--        <table tableName="base_user" modelType="flat"
                domainObjectName="BaseUser" enableCountByExample="true"
                enableDeleteByExample="true" enableSelectByExample="true"
                enableUpdateByExample="true">
             <columnOverride column="id" jdbcType="BIGINT" javaType="Long" />
-        </table>
+        </table>-->
         <table tableName="base_config" modelType="flat"
                domainObjectName="BaseConfig" enableCountByExample="true"
                enableDeleteByExample="true" enableSelectByExample="true"
                enableUpdateByExample="true">
             <columnOverride column="id" jdbcType="BIGINT" javaType="Long" />
-            <columnOverride column="config_body" jdbcType="CLOB" javaType="String" />
-            <columnOverride column="remark" jdbcType="CLOB" javaType="String" />
+            <columnOverride column="config_body" jdbcType="VARCHAR" javaType="String" />
+            <columnOverride column="remark" jdbcType="VARCHAR" javaType="String" />
             <columnOverride column="is_deleted" jdbcType="TINYINT" javaType="Boolean" />
         </table>
-        <table tableName="base_manager" modelType="flat"
+<!--        <table tableName="base_manager" modelType="flat"
                domainObjectName="BaseManager" enableCountByExample="true"
                enableDeleteByExample="true" enableSelectByExample="true"
                enableUpdateByExample="true">
             <columnOverride column="id" jdbcType="BIGINT" javaType="Long" />
-        </table>
-        <table tableName="text_tag" modelType="flat"
+        </table>-->
+<!--        <table tableName="text_tag" modelType="flat"
                domainObjectName="TextTag" enableCountByExample="true"
                enableDeleteByExample="true" enableSelectByExample="true"
                enableUpdateByExample="true">
             <columnOverride column="id" jdbcType="BIGINT" javaType="Long" />
             <columnOverride column="user_id" jdbcType="BIGINT" javaType="Long" />
-            <columnOverride column="text_id_list" jdbcType="CLOB" javaType="String" />
-        </table>
-        <table tableName="text_label" modelType="flat"
+            <columnOverride column="text_id_list" jdbcType="VARCHAR" javaType="String" />
+        </table>-->
+<!--        <table tableName="text_label" modelType="flat"
                domainObjectName="TextLabel" enableCountByExample="true"
                enableDeleteByExample="true" enableSelectByExample="true"
                enableUpdateByExample="true">
             <columnOverride column="id" jdbcType="BIGINT" javaType="Long" />
             <columnOverride column="user_id" jdbcType="BIGINT" javaType="Long" />
-            <columnOverride column="tag_id_list" jdbcType="CLOB" javaType="String" />
-        </table>
-        <table tableName="text_body" modelType="flat"
+            <columnOverride column="tag_id_list" jdbcType="VARCHAR" javaType="String" />
+        </table>-->
+<!--        <table tableName="text_body" modelType="flat"
                domainObjectName="TextBody" enableCountByExample="true"
                enableDeleteByExample="true" enableSelectByExample="true"
                enableUpdateByExample="true">
             <columnOverride column="id" jdbcType="BIGINT" javaType="Long" />
             <columnOverride column="user_id" jdbcType="BIGINT" javaType="Long" />
+            <columnOverride column="text_body" jdbcType="VARCHAR" javaType="String" />
             <columnOverride column="is_deleted" jdbcType="TINYINT" javaType="Boolean" />
-        </table>
+        </table>-->
         <table tableName="request_log" modelType="flat"
                domainObjectName="RequestLog" enableCountByExample="true"
                enableDeleteByExample="true" enableSelectByExample="true"
                enableUpdateByExample="true">
             <columnOverride column="id" jdbcType="BIGINT" javaType="Long" />
-            <columnOverride column="remark" jdbcType="CLOB" javaType="String" />
-            <columnOverride column="request_body" jdbcType="CLOB" javaType="String" />
+            <columnOverride column="remark" jdbcType="VARCHAR" javaType="String" />
+            <columnOverride column="request_body" jdbcType="VARCHAR" javaType="String" />
             <columnOverride column="is_deleted" jdbcType="TINYINT" javaType="Boolean" />
         </table>
     </context>

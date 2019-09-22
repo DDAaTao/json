@@ -625,6 +625,76 @@ public class TextLabelExample {
             return (Criteria) this;
         }
 
+        public Criteria andTagIdListIsNull() {
+            addCriterion("tag_id_list is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andTagIdListIsNotNull() {
+            addCriterion("tag_id_list is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andTagIdListEqualTo(String value) {
+            addCriterion("tag_id_list =", value, "tagIdList");
+            return (Criteria) this;
+        }
+
+        public Criteria andTagIdListNotEqualTo(String value) {
+            addCriterion("tag_id_list <>", value, "tagIdList");
+            return (Criteria) this;
+        }
+
+        public Criteria andTagIdListGreaterThan(String value) {
+            addCriterion("tag_id_list >", value, "tagIdList");
+            return (Criteria) this;
+        }
+
+        public Criteria andTagIdListGreaterThanOrEqualTo(String value) {
+            addCriterion("tag_id_list >=", value, "tagIdList");
+            return (Criteria) this;
+        }
+
+        public Criteria andTagIdListLessThan(String value) {
+            addCriterion("tag_id_list <", value, "tagIdList");
+            return (Criteria) this;
+        }
+
+        public Criteria andTagIdListLessThanOrEqualTo(String value) {
+            addCriterion("tag_id_list <=", value, "tagIdList");
+            return (Criteria) this;
+        }
+
+        public Criteria andTagIdListLike(String value) {
+            addCriterion("tag_id_list like", value, "tagIdList");
+            return (Criteria) this;
+        }
+
+        public Criteria andTagIdListNotLike(String value) {
+            addCriterion("tag_id_list not like", value, "tagIdList");
+            return (Criteria) this;
+        }
+
+        public Criteria andTagIdListIn(List<String> values) {
+            addCriterion("tag_id_list in", values, "tagIdList");
+            return (Criteria) this;
+        }
+
+        public Criteria andTagIdListNotIn(List<String> values) {
+            addCriterion("tag_id_list not in", values, "tagIdList");
+            return (Criteria) this;
+        }
+
+        public Criteria andTagIdListBetween(String value1, String value2) {
+            addCriterion("tag_id_list between", value1, value2, "tagIdList");
+            return (Criteria) this;
+        }
+
+        public Criteria andTagIdListNotBetween(String value1, String value2) {
+            addCriterion("tag_id_list not between", value1, value2, "tagIdList");
+            return (Criteria) this;
+        }
+
         public Criteria andEnvIsNull() {
             addCriterion("env is null");
             return (Criteria) this;

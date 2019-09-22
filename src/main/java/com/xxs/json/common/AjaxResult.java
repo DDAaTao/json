@@ -41,5 +41,11 @@ public class AjaxResult<T> {
                 .message(code.getMsg())
                 .build();
     }
+    public static AjaxResult fail(String code, String message){
+        return AjaxResult.builder()
+                .code(code)
+                .message(message)
+                .build();
+    }
 
 }

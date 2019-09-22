@@ -505,6 +505,76 @@ public class TextTagExample {
             return (Criteria) this;
         }
 
+        public Criteria andTextIdListIsNull() {
+            addCriterion("text_id_list is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andTextIdListIsNotNull() {
+            addCriterion("text_id_list is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andTextIdListEqualTo(String value) {
+            addCriterion("text_id_list =", value, "textIdList");
+            return (Criteria) this;
+        }
+
+        public Criteria andTextIdListNotEqualTo(String value) {
+            addCriterion("text_id_list <>", value, "textIdList");
+            return (Criteria) this;
+        }
+
+        public Criteria andTextIdListGreaterThan(String value) {
+            addCriterion("text_id_list >", value, "textIdList");
+            return (Criteria) this;
+        }
+
+        public Criteria andTextIdListGreaterThanOrEqualTo(String value) {
+            addCriterion("text_id_list >=", value, "textIdList");
+            return (Criteria) this;
+        }
+
+        public Criteria andTextIdListLessThan(String value) {
+            addCriterion("text_id_list <", value, "textIdList");
+            return (Criteria) this;
+        }
+
+        public Criteria andTextIdListLessThanOrEqualTo(String value) {
+            addCriterion("text_id_list <=", value, "textIdList");
+            return (Criteria) this;
+        }
+
+        public Criteria andTextIdListLike(String value) {
+            addCriterion("text_id_list like", value, "textIdList");
+            return (Criteria) this;
+        }
+
+        public Criteria andTextIdListNotLike(String value) {
+            addCriterion("text_id_list not like", value, "textIdList");
+            return (Criteria) this;
+        }
+
+        public Criteria andTextIdListIn(List<String> values) {
+            addCriterion("text_id_list in", values, "textIdList");
+            return (Criteria) this;
+        }
+
+        public Criteria andTextIdListNotIn(List<String> values) {
+            addCriterion("text_id_list not in", values, "textIdList");
+            return (Criteria) this;
+        }
+
+        public Criteria andTextIdListBetween(String value1, String value2) {
+            addCriterion("text_id_list between", value1, value2, "textIdList");
+            return (Criteria) this;
+        }
+
+        public Criteria andTextIdListNotBetween(String value1, String value2) {
+            addCriterion("text_id_list not between", value1, value2, "textIdList");
+            return (Criteria) this;
+        }
+
         public Criteria andEnvIsNull() {
             addCriterion("env is null");
             return (Criteria) this;

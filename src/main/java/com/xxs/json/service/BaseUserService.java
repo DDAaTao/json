@@ -1,5 +1,6 @@
 package com.xxs.json.service;
 
+import com.xxs.json.common.JsonGroupException;
 import com.xxs.json.entity.BaseUser;
 import com.xxs.json.entity.vo.UserVO;
 
@@ -12,12 +13,12 @@ public interface BaseUserService {
      * 添加用户方法
      * @param user 用户
      * */
-    void addUser(BaseUser user);
+    void addUser(BaseUser user) throws JsonGroupException;
 
     /**
      * 用户登录
      * @param baseUser 账户和密码
      * @return baseUser
      * */
-    UserVO userLogin(BaseUser baseUser);
+    UserVO userLogin(BaseUser baseUser) throws JsonGroupException;
 }

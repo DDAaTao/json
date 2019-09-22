@@ -505,6 +505,76 @@ public class TextBodyExample {
             return (Criteria) this;
         }
 
+        public Criteria andTextBodyIsNull() {
+            addCriterion("text_body is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andTextBodyIsNotNull() {
+            addCriterion("text_body is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andTextBodyEqualTo(String value) {
+            addCriterion("text_body =", value, "textBody");
+            return (Criteria) this;
+        }
+
+        public Criteria andTextBodyNotEqualTo(String value) {
+            addCriterion("text_body <>", value, "textBody");
+            return (Criteria) this;
+        }
+
+        public Criteria andTextBodyGreaterThan(String value) {
+            addCriterion("text_body >", value, "textBody");
+            return (Criteria) this;
+        }
+
+        public Criteria andTextBodyGreaterThanOrEqualTo(String value) {
+            addCriterion("text_body >=", value, "textBody");
+            return (Criteria) this;
+        }
+
+        public Criteria andTextBodyLessThan(String value) {
+            addCriterion("text_body <", value, "textBody");
+            return (Criteria) this;
+        }
+
+        public Criteria andTextBodyLessThanOrEqualTo(String value) {
+            addCriterion("text_body <=", value, "textBody");
+            return (Criteria) this;
+        }
+
+        public Criteria andTextBodyLike(String value) {
+            addCriterion("text_body like", value, "textBody");
+            return (Criteria) this;
+        }
+
+        public Criteria andTextBodyNotLike(String value) {
+            addCriterion("text_body not like", value, "textBody");
+            return (Criteria) this;
+        }
+
+        public Criteria andTextBodyIn(List<String> values) {
+            addCriterion("text_body in", values, "textBody");
+            return (Criteria) this;
+        }
+
+        public Criteria andTextBodyNotIn(List<String> values) {
+            addCriterion("text_body not in", values, "textBody");
+            return (Criteria) this;
+        }
+
+        public Criteria andTextBodyBetween(String value1, String value2) {
+            addCriterion("text_body between", value1, value2, "textBody");
+            return (Criteria) this;
+        }
+
+        public Criteria andTextBodyNotBetween(String value1, String value2) {
+            addCriterion("text_body not between", value1, value2, "textBody");
+            return (Criteria) this;
+        }
+
         public Criteria andIsDeletedIsNull() {
             addCriterion("is_deleted is null");
             return (Criteria) this;
