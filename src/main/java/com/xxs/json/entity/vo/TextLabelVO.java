@@ -14,10 +14,11 @@ import java.util.List;
 @NoArgsConstructor
 public class TextLabelVO {
     private Long id;
-    private String labelName;
+    private String label;
     /**
      * 侧栏类型，1为文件夹，2为文本
      * */
     private Byte labelType;
-    private List<TextLabelVO> child;
+    private Long fatherId;
+    private List<TextLabelVO> children;
 }

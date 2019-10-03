@@ -3,6 +3,7 @@ package com.xxs.json.service;
 import com.xxs.json.common.JsonGroupException;
 import com.xxs.json.entity.TextBody;
 import com.xxs.json.entity.TextLabel;
+import com.xxs.json.entity.vo.TextLabelVO;
 
 import java.util.List;
 
@@ -16,7 +17,14 @@ public interface TextMainService {
      * @param userId userId
      * @return labels
      * */
-    List<TextLabel> getTextLabelByUser(Long userId);
+    List<TextLabelVO> getTextLabelByUser(Long userId);
+
+    /**
+     * 通过userId获取对应的label
+     * @param userId userId
+     * @return labels
+     * */
+    List<TextLabelVO> getTextLabelByUserTwo(Long userId);
     /**
      * 通过userId获取对应的text
      * @param userId userId
