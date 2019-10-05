@@ -31,6 +31,13 @@ public interface TextMainService {
      * @return texts
      * */
     List<TextBody> getTextBodyByUser(Long userId);
+
+    /**
+     * 通过textId获取对应的文本
+     * @param textId textId
+     * @return textBody
+     * */
+    TextBody getTextBodyByTextId(Long textId);
     /**
      * 新增笔记
      * @param text 笔记

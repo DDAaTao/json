@@ -17,6 +17,13 @@ public interface TextBodyDao {
     List<TextBody> getTextBodyByUser(Long userId);
 
     /**
+     * 通过userId获取其对应的TextBody
+     * @param textId textId
+     * @return text
+     * */
+    TextBody getTextBodyByTextId(Long textId);
+
+    /**
      * 新增
      * @param textBody textBody
      * @return 标识

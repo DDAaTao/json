@@ -7,6 +7,7 @@ import com.xxs.json.entity.TextBodyExample;
 import com.xxs.json.mapper.TextBodyMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.CollectionUtils;
 
 import java.util.List;
 
@@ -30,6 +31,17 @@ public class TextBodyDaoImpl implements TextBodyDao {
                 .andEnvEqualTo(baseConfigDao.getEnv())
                 .andIsDeletedEqualTo(false);
         return textBodyMapper.selectByExample(textBodyExample);
+    }
+
+    @Override
+    public TextBody getTextBodyByTextId(Long textId) {
+        TextBodyExample textBodyExample = new TextBodyExample();
+        textBodyExample.createCriteria()
+                .andIdEqualTo(textId)
+                .andEnvEqualTo(baseConfigDao.getEnv())
+                .andIsDeletedEqualTo(false);
+        List<TextBody> textBodies = textBodyMapper.selectByExample(textBodyExample);
+        return CollectionUtils.isEmpty(textBodies) ? null : textBodies.get(0);
     }
 
     @Override
