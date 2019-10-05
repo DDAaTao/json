@@ -9,6 +9,7 @@ import com.xxs.json.dao.TextBodyDao;
 import com.xxs.json.dao.TextLabelDao;
 import com.xxs.json.entity.TextBody;
 import com.xxs.json.entity.TextLabel;
+import com.xxs.json.entity.vo.LabelChangeVO;
 import com.xxs.json.entity.vo.TextLabelVO;
 import com.xxs.json.mapper.my.MyLabelMapper;
 import com.xxs.json.service.TextMainService;
@@ -81,6 +82,9 @@ public class TextMainServiceImpl implements TextMainService {
                 resultList.add(vo);
             }else {
                 TextLabelVO father = voById.get(vo.getFatherId());
+                if (father == null){
+                    continue;
+                }
                 if (CollectionUtils.isEmpty(father.getChildren())){
                     father.setChildren(Lists.newArrayList(vo));
                 }else {
@@ -98,6 +102,9 @@ public class TextMainServiceImpl implements TextMainService {
 
     @Override
     public void addTextBody(TextBody text) throws JsonGroupException {
+        if (text.getId() == null){
+            throw new JsonGroupException("获取Id异常");
+        }
         text.setGmtCreate(DateUtils.now());
         text.setGmtModified(DateUtils.now());
         text.setIsDeleted(false);
@@ -118,5 +125,34 @@ public class TextMainServiceImpl implements TextMainService {
     @Override
     public TextBody getTextBodyByTextId(Long textId) {
         return textBodyDao.getTextBodyByTextId(textId);
+    }
+
+    @Override
+    public int changeLabelFather(LabelChangeVO vo) {
+        return textLabelDao.updateLabel(TextLabel.builder()
+                .gmtModified(DateUtils.now())
+                .id(vo.getChildrenId())
+                .labelFather(vo.getFatherId())
+                .build());
+    }
+
+    @Override
+    public int updateLabel(TextLabel label) {
+        label.setGmtModified(DateUtils.now());
+        return textLabelDao.updateLabel(label);
+    }
+
+    @Override
+    public int deleteLabel(Long id) {
+        return textLabelDao.deleteLabel(id);
+    }
+
+    @Override
+    public int saveTextBody(TextBody textBody) {
+        if (textBody.getId() == null){
+            return 0;
+        }
+        textBody.setGmtModified(DateUtils.now());
+        return textBodyDao.updateTextBody(textBody);
     }
 }

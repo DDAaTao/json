@@ -36,4 +36,14 @@ public class TextLabelDaoImpl implements TextLabelDao {
                 .andEnvEqualTo(baseConfigDao.getEnv());
         return textLabelMapper.selectByExample(textLabelExample);
     }
+
+    @Override
+    public int updateLabel(TextLabel label) {
+        return textLabelMapper.updateByPrimaryKeySelective(label);
+    }
+
+    @Override
+    public int deleteLabel(Long id) {
+        return textLabelMapper.deleteByPrimaryKey(id);
+    }
 }

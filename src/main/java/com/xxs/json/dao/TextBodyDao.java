@@ -28,5 +28,13 @@ public interface TextBodyDao {
      * @param textBody textBody
      * @return 标识
      * */
-    Integer addTextBody(TextBody textBody);
+    int addTextBody(TextBody textBody);
+
+    /**
+     * 修改/保存
+     * @param textBody text
+     * @return num
+     * */
+    int updateTextBody(TextBody textBody);
+
 }

@@ -45,8 +45,13 @@ public class TextBodyDaoImpl implements TextBodyDao {
     }
 
     @Override
-    public Integer addTextBody(TextBody textBody) {
+    public int addTextBody(TextBody textBody) {
         textBody.setEnv(baseConfigDao.getEnv());
         return textBodyMapper.insertSelective(textBody);
+    }
+
+    @Override
+    public int updateTextBody(TextBody textBody) {
+        return textBodyMapper.updateByPrimaryKeySelective(textBody);
     }
 }

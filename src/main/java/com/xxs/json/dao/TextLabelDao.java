@@ -21,4 +21,18 @@ public interface TextLabelDao {
      * @return labels
      * */
     List<TextLabel> getTextLabelsByUser(Long userId);
+
+    /**
+     * 修改节点信息
+     * @param label fatherById
+     * @return num
+     * */
+    int updateLabel(TextLabel label);
+
+    /**
+     * 删除节点
+     * @param id id
+     * @return num
+     * */
+    int deleteLabel(Long id);
 }
