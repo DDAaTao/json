@@ -31,7 +31,11 @@ public class CaffeineCacheConfig {
         /**
          * 配置数据缓存
          * */
-        CONFIG(6000, 100);
+        CONFIG(6000, 100),
+        /**
+         * 用户token, 此处的 maxSize 需要后期数据量上去之后动态配
+         * */
+        USER_TOKEN(6000, 5000);
 
         @Getter
         private int ttl;

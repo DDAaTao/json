@@ -23,4 +23,8 @@ public class UserVO {
     private String avator;
     private Byte sex;
     private Date lastLoginTime;
+    /**
+     * 登录令牌
+     * */
+    private String token;
 }

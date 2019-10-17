@@ -1,6 +1,7 @@
 package com.xxs.json.service.impl;
 
 import com.xxs.json.common.JsonGroupException;
+import com.xxs.json.common.util.CacheMapUtils;
 import com.xxs.json.common.util.DateUtils;
 import com.xxs.json.common.util.MD5Utils;
 import com.xxs.json.dao.BaseUserDao;
@@ -11,6 +12,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.UUID;
 
 import static com.xxs.json.common.ResultCode.*;
 
@@ -55,6 +58,8 @@ public class BaseUserServiceImpl implements BaseUserService {
         }
         baseUserDao.updateUser(BaseUser.builder()
                 .id(user.getId()).lastLoginTime(user.getLastLoginTime()).build());
+        String token = UUID.randomUUID().toString();
+        CacheMapUtils.getInstance().putUserToken(user.getId(), token);
         return UserVO.builder()
                 .userId(user.getId())
                 .nickname(user.getNickname())
@@ -63,6 +68,7 @@ public class BaseUserServiceImpl implements BaseUserService {
                 .lastLoginTime(user.getLastLoginTime())
                 .sex(user.getSex())
                 .status(user.getStatus())
+                .token(token)
                 .build();
     }
 }
